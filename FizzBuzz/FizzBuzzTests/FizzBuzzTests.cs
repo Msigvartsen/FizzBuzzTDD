@@ -42,5 +42,13 @@ namespace FizzBuzzTests
             }
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void DivisibleBy_NegativeNumbers_ExpectedFail()
+        {
+            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+
+            fizzBuzzService.DivisibleBy(10, -1);
+        }
     }
 }
