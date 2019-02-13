@@ -14,34 +14,47 @@ namespace IFizzBuzzServiceNS
 
         public string[] GetFizzBuzz(int count)
         {
-            if(count <= 0)
+            if(count <= 0 || count > int.MaxValue)
             {
                 throw new ArgumentOutOfRangeException("Count out of bounds. (1 - " + int.MaxValue + ")");
             }
-            string[] temp = new string[count];
+
+            string[] fizzBuzzValues = new string[count];
             
             for(int i = 1; i <= count; i++)
             {
                 if (DivisibleBy(i, 15))
-                    temp[i] = "FizzBuzz";
+                {
+                    fizzBuzzValues[i] = "FizzBuzz";
+                }
                 else if (DivisibleBy(i, 5))
-                    temp[i] = "Buzz";
-                else if (DivisibleBy(i, 3))
-                    temp[i] = "Fizz";
+                {
+                    fizzBuzzValues[i] = "Buzz";
+                }
+                else if(DivisibleBy(i, 3))
+                {
+                    fizzBuzzValues[i] = "Fizz";
+                }
                 else
-                    temp[i] = i.ToString();
+                {
+                    fizzBuzzValues[i] = i.ToString();
+                }
             }
 
-            return temp;
+            return fizzBuzzValues;
         }
 
 
         public bool DivisibleBy(int numerator, int denominator)
         {
             if (denominator == 3 || denominator == 5 || denominator == 15)
+            {
                 return (numerator % denominator) == 0 ? true : false;
+            }
             else
+            {
                 throw new ArgumentOutOfRangeException("Denominator Out Of Range: (3, 5, 15) For FizzBuzz Program");
+            }
         }
     }
 }
