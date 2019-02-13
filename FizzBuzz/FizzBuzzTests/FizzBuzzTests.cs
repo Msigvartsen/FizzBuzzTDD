@@ -78,6 +78,12 @@ namespace FizzBuzzTests
             Assert.IsTrue(fizzBuzzService.IsFizz(9));
         }
 
+        [TestMethod]
+        public void IsBuzz_DenominatorEqualsThree_ShouldReturnTrue()
+        {
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
+            Assert.IsTrue(fizzBuzzService.IsBuzz(5));
+        }
     }
 }
