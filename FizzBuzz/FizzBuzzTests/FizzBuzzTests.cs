@@ -11,6 +11,8 @@ namespace FizzBuzzTests
         public void DivisibleBy_DivideByThree_ModulusEqualZero()
         {
             IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+
+            fizzBuzzService.DivisibleBy(3);
         }
     }
 }

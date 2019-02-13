@@ -12,5 +12,10 @@ namespace IFizzBuzzServiceNS
         {
 
         }
+
+        public void DivisibleBy(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
