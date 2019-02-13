@@ -12,15 +12,10 @@ namespace IFizzBuzzServiceNS
         {
 
         }
-
-        public bool DivisibleBy(int count, int divider)
+        
+        public bool DivisibleBy(int numerator, int denominator)
         {
-            return (count % divider) == 0 ? true : false;
-
-            //if(count % divider == 0)
-            //    return true;
-            //else
-            //    return false;
+            return (numerator % denominator) == 0 ? true : false;
         }
     }
 }
