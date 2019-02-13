@@ -13,11 +13,19 @@ namespace FizzBuzzProgram
         {
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService(3,5);
 
-            foreach(string result in fizzBuzzService.RunFizzBuzz(100))
+            int count = 100;
+
+            while(true)
             {
-                Console.WriteLine(result);
+                foreach (string result in fizzBuzzService.RunFizzBuzz(count))
+                {
+                    Console.WriteLine(result);
+                }
+
+                string line = Console.ReadLine();
+                count = int.TryParse(line, out int val) ? val : 100;
             }
-            Console.ReadLine();
+          
         }
     }
 }
