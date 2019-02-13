@@ -25,19 +25,19 @@ namespace IFizzBuzzServiceNS
             {
                 if (DivisibleBy(i, 15))
                 {
-                    fizzBuzzValues[i] = "FizzBuzz";
+                    fizzBuzzValues[i - 1] = "FizzBuzz";
                 }
                 else if (DivisibleBy(i, 5))
                 {
-                    fizzBuzzValues[i] = "Buzz";
+                    fizzBuzzValues[i - 1] = "Buzz";
                 }
                 else if(DivisibleBy(i, 3))
                 {
-                    fizzBuzzValues[i] = "Fizz";
+                    fizzBuzzValues[i - 1] = "Fizz";
                 }
                 else
                 {
-                    fizzBuzzValues[i] = i.ToString();
+                    fizzBuzzValues[i - 1] = i.ToString();
                 }
             }
 
