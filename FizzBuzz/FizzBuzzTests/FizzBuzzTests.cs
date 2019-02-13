@@ -30,18 +30,7 @@ namespace FizzBuzzTests
                 Assert.IsTrue(fizzBuzzService.DivisibleBy(count, divider));
             }
         }
-        [TestMethod]
-        public void DivisibleBy_DivideByFifteen_ModulusEqualZero()
-        {
-            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
-
-            int divider = 15;
-            for (int count = 0; count < 100; count += 15)
-            {
-                Assert.IsTrue(fizzBuzzService.DivisibleBy(count, divider));
-            }
-        }
-
+        
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void DivisibleBy_NegativeNumbers_OutOfRangeException()

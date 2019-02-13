@@ -9,24 +9,26 @@ namespace FizzBuzzService
         private readonly string _fizz = "Fizz";
         private readonly string _buzz = "Buzz";
 
-
         public string GetFizzBuzz(int nominator)
         {
-            string fizzBuzz = "";
+            string fizzBuzz = string.Empty;
+            fizzBuzz += IsFizz(nominator) ? _fizz : string.Empty;
+            fizzBuzz += IsBuzz(nominator) ? _buzz : string.Empty;
 
-            if (DivisibleBy(nominator, 3))
-            {
-                fizzBuzz += _fizz;
-            }
-            if (DivisibleBy(nominator, 5))
-            {
-                fizzBuzz += _buzz;
-            }
-
-            if(fizzBuzz.Length == 0)
+            if (fizzBuzz.Length == 0)
                 fizzBuzz = nominator.ToString();
 
             return fizzBuzz;
+        }
+
+        public bool IsFizz(int nominator)
+        {
+            return DivisibleBy(nominator, 3) ? true : false;
+        }
+
+        public bool IsBuzz(int nominator)
+        {
+            return DivisibleBy(nominator, 5) ? true : false;
         }
 
         public string[] RunFizzBuzz(int count)
@@ -49,7 +51,7 @@ namespace FizzBuzzService
 
         public bool DivisibleBy(int numerator, int denominator)
         {
-            if (denominator == 3 || denominator == 5 || denominator == 15)
+            if (denominator == 3 || denominator == 5)
             {
                 return (numerator % denominator) == 0 ? true : false;
             }
