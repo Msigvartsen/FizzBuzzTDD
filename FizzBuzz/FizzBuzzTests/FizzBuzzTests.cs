@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using IFizzBuzzServiceNS;
 
 namespace FizzBuzzTests
 {
@@ -7,9 +8,9 @@ namespace FizzBuzzTests
     public class FizzBuzzTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DivisibleBy_DivideByThree_ModulusEqualZero()
         {
-
+            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
         }
     }
 }
