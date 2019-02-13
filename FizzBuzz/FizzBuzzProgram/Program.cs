@@ -11,7 +11,7 @@ namespace FizzBuzzProgram
     {
         static void Main(string[] args)
         {
-            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService(3,5);
 
             foreach(string result in fizzBuzzService.RunFizzBuzz(100))
             {
