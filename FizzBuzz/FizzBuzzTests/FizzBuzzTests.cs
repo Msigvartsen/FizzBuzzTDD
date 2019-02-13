@@ -50,5 +50,26 @@ namespace FizzBuzzTests
 
             fizzBuzzService.DivisibleBy(10, -1);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void DivisibleBy_DivideByZero_ExpectedFail()
+        {
+            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+
+            fizzBuzzService.DivisibleBy(10, 0);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void DivisibleBy_DenominatorThreeFiveFifteen_ExpectedFail()
+        {
+            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+
+            for(int i = 1; i < 100; i++)
+            {
+                fizzBuzzService.DivisibleBy(10, i);
+            }
+        }
     }
 }

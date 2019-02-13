@@ -10,12 +10,16 @@ namespace IFizzBuzzServiceNS
     {
         public IFizzBuzzService()
         {
-
         }
-        
+
         public bool DivisibleBy(int numerator, int denominator)
         {
-            return (numerator % denominator) == 0 ? true : false;
+            if (denominator == 3 || denominator == 5 || denominator == 15)
+                return (numerator % denominator) == 0 ? true : false;
+            else
+                throw new ArgumentOutOfRangeException("Denominator Out Of Range: (3, 5, 15) For FizzBuzz Program");
+
         }
     }
 }
+
