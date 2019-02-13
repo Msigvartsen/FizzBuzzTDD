@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FizzBuzzService;
+using IFizzBuzzServiceNS;
 
 namespace FizzBuzzProgram
 {
@@ -11,7 +7,7 @@ namespace FizzBuzzProgram
     {
         static void Main(string[] args)
         {
-            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService(3,5);
+            IFizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService(3,5);
 
             int count = 100;
 
@@ -25,7 +21,6 @@ namespace FizzBuzzProgram
                 string line = Console.ReadLine();
                 count = int.TryParse(line, out int val) ? val : 100;
             }
-          
         }
     }
 }

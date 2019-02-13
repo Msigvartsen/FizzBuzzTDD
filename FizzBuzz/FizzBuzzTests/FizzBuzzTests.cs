@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FizzBuzzService;
 
 namespace FizzBuzzTests
 {
@@ -79,11 +78,27 @@ namespace FizzBuzzTests
         }
 
         [TestMethod]
-        public void IsBuzz_DenominatorEqualsThree_ShouldReturnTrue()
+        public void IsBuzz_DenominatorEqualsFive_ShouldReturnTrue()
         {
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             Assert.IsTrue(fizzBuzzService.IsBuzz(5));
+        }
+
+        [TestMethod]
+        public void GetFizzBuzz_DenominatorAsFive_ShouldReturnBuzz()
+        {
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
+
+            Assert.AreEqual(fizzBuzzService.GetFizzBuzz(5), "Buzz");
+        }
+
+        [TestMethod]
+        public void GetFizzBuzz_DenominatorAsThree_ShouldReturnFizz()
+        {
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
+
+            Assert.AreEqual(fizzBuzzService.GetFizzBuzz(3), "Fizz");
         }
     }
 }
