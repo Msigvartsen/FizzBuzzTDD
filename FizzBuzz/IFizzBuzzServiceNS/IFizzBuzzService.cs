@@ -13,9 +13,14 @@ namespace IFizzBuzzServiceNS
 
         }
 
-        public void DivisibleBy(int v)
+        public bool DivisibleBy(int count, int divider)
         {
-            throw new NotImplementedException();
+            return (count % divider) == 0 ? true : false;
+
+            //if(count % divider == 0)
+            //    return true;
+            //else
+            //    return false;
         }
     }
 }

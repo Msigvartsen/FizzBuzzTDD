@@ -12,7 +12,12 @@ namespace FizzBuzzTests
         {
             IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
 
-            fizzBuzzService.DivisibleBy(3);
+            int count = 9;
+            int divider = 3;
+
+            Assert.IsTrue(fizzBuzzService.DivisibleBy(count, divider));
         }
+
+      
     }
 }
