@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IFizzBuzzServiceNS;
+using FizzBuzzService;
 
 namespace FizzBuzzTests
 {
@@ -10,7 +10,7 @@ namespace FizzBuzzTests
         [TestMethod]
         public void DivisibleBy_DivideByThree_ModulusEqualZero()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             int divider = 3;
             for (int count = 0; count < 100; count += 3)
@@ -22,7 +22,7 @@ namespace FizzBuzzTests
         [TestMethod]
         public void DivisibleBy_DivideByFive_ModulusEqualZero()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             int divider = 5;
             for(int count=0; count < 100; count+=5)
@@ -33,7 +33,7 @@ namespace FizzBuzzTests
         [TestMethod]
         public void DivisibleBy_DivideByFifteen_ModulusEqualZero()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             int divider = 15;
             for (int count = 0; count < 100; count += 15)
@@ -46,7 +46,7 @@ namespace FizzBuzzTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void DivisibleBy_NegativeNumbers_OutOfRangeException()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             fizzBuzzService.DivisibleBy(10, -1);
         }
@@ -55,7 +55,7 @@ namespace FizzBuzzTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void DivisibleBy_DivideByZero_OutOfRangeException()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             fizzBuzzService.DivisibleBy(10, 0);
         }
@@ -64,7 +64,7 @@ namespace FizzBuzzTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void DivisibleBy_DenominatorThreeFiveFifteen_OutOfRangeException()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             for(int i = 1; i < 100; i++)
             {
@@ -76,9 +76,9 @@ namespace FizzBuzzTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetFizzBuzz_NegativeCount_OutOfRangeException()
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
-            fizzBuzzService.GetFizzBuzz(-1);
+            fizzBuzzService.RunFizzBuzz(-1);
         }
     }
 }

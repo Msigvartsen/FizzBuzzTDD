@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IFizzBuzzServiceNS\IFizzBuzzServiceNS.csproj">
+    <ProjectReference Include="..\IFizzBuzzServiceNS\FizzBuzzService.csproj">
       <Project>{de4dbe0b-2dff-421c-8663-e0537635f1fb}</Project>
-      <Name>IFizzBuzzServiceNS</Name>
+      <Name>FizzBuzzService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

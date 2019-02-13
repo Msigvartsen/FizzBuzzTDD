@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzTests", "FizzBuzzTests\FizzBuzzTests.csproj", "{934E9065-9BC3-47C4-A90B-BD33A42F622B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFizzBuzzServiceNS", "IFizzBuzzServiceNS\IFizzBuzzServiceNS.csproj", "{DE4DBE0B-2DFF-421C-8663-E0537635F1FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzService", "IFizzBuzzServiceNS\FizzBuzzService.csproj", "{DE4DBE0B-2DFF-421C-8663-E0537635F1FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzProgram", "FizzBuzzProgram\FizzBuzzProgram.csproj", "{E2B643E0-C590-480A-A97E-DEEDEC1C1135}"
 EndProject

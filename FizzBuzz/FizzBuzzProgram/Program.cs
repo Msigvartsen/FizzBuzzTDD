@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IFizzBuzzServiceNS;
+using FizzBuzzService;
 
 namespace FizzBuzzProgram
 {
@@ -11,9 +11,9 @@ namespace FizzBuzzProgram
     {
         static void Main(string[] args)
         {
-            IFizzBuzzService fizzBuzzService = new IFizzBuzzService();
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
-            foreach(string result in fizzBuzzService.GetFizzBuzz(100))
+            foreach(string result in fizzBuzzService.RunFizzBuzz(100))
             {
                 Console.WriteLine(result);
             }
