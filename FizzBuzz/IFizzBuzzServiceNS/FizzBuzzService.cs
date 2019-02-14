@@ -46,10 +46,9 @@ namespace FizzBuzzService
             {
                 Console.WriteLine("Count out of bounds. (1 - " + _maxFizzBuzzCount + ")");
                 return new string[0];
-                //throw new ArgumentOutOfRangeException("Count out of bounds. (1 - " + _maxFizzBuzzCount + ")");
             }
+
             string[] fizzBuzzValues = new string[count];
-            
 
             for (int i = 1; i <= count; i++)
             {
@@ -58,7 +57,6 @@ namespace FizzBuzzService
 
             return fizzBuzzValues;
         }
-
 
         public bool DivisibleBy(int numerator, int denominator)
         {
