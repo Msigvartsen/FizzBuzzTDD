@@ -10,6 +10,7 @@ namespace FizzBuzzService
 
         private readonly int _fizzDenominator;
         private readonly int _buzzDenominator;
+        private readonly int _maxFizzBuzzCount = 9999;
 
         public FizzBuzzService(int fizzDenominator = 3, int buzzDenominator = 5)
         {
@@ -41,12 +42,14 @@ namespace FizzBuzzService
 
         public string[] RunFizzBuzz(int count)
         {
-            if(count <= 0 || count > int.MaxValue)
+            if (count <= 0 || count > _maxFizzBuzzCount)
             {
-                throw new ArgumentOutOfRangeException("Count out of bounds. (1 - " + int.MaxValue + ")");
+                Console.WriteLine("Count out of bounds. (1 - " + _maxFizzBuzzCount + ")");
+                return new string[0];
+                //throw new ArgumentOutOfRangeException("Count out of bounds. (1 - " + _maxFizzBuzzCount + ")");
             }
-
             string[] fizzBuzzValues = new string[count];
+            
 
             for (int i = 1; i <= count; i++)
             {

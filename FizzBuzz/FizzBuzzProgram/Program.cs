@@ -5,13 +5,14 @@ namespace FizzBuzzProgram
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            IFizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService(3,5);
+            IFizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService(3, 5);
 
             int count = 100;
 
-            while(true)
+            while (true)
             {
                 foreach (string result in fizzBuzzService.RunFizzBuzz(count))
                 {

@@ -58,12 +58,12 @@ namespace FizzBuzzTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void GetFizzBuzz_NegativeCount_OutOfRangeException()
+        public void RunFizzBuzz_NegativeCount_ShouldReturnZeroLength()
         {
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
-            fizzBuzzService.RunFizzBuzz(-1);
+            string[] fizzBuzz = fizzBuzzService.RunFizzBuzz(-1);
+            Assert.AreEqual(0, fizzBuzz.Length);
         }
 
         [TestMethod]
