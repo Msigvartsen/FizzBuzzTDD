@@ -12,7 +12,7 @@ namespace FizzBuzzTests
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             int divider = 3;
-            for (int count = 0; count < 100; count += 3)
+            for (int count = 0; count < 100; count += divider)
             {
                 Assert.IsTrue(fizzBuzzService.DivisibleBy(count, divider));
             }
@@ -24,7 +24,7 @@ namespace FizzBuzzTests
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             int divider = 5;
-            for(int count=0; count < 100; count+=5)
+            for(int count=0; count < 100; count+=divider)
             {
                 Assert.IsTrue(fizzBuzzService.DivisibleBy(count, divider));
             }
@@ -50,14 +50,11 @@ namespace FizzBuzzTests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void DivisibleBy_DenominatorThreeFiveFifteen_OutOfRangeException()
+        public void DivisibleBy_DenominatorNotDivisibleByThreeOrFive_OutOfRangeException()
         {
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
-            for(int i = 1; i < 100; i++)
-            {
-                fizzBuzzService.DivisibleBy(10, i);
-            }
+            fizzBuzzService.DivisibleBy(10, 2);
         }
 
         [TestMethod]
@@ -99,6 +96,14 @@ namespace FizzBuzzTests
             FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
 
             Assert.AreEqual(fizzBuzzService.GetFizzBuzz(3), "Fizz");
+        }
+
+        [TestMethod]
+        public void GetFizzBuzz_DenominatorAsFifteen_ShouldReturnFizzBuzz()
+        {
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
+
+            Assert.AreEqual(fizzBuzzService.GetFizzBuzz(15), "FizzBuzz");
         }
     }
 }
