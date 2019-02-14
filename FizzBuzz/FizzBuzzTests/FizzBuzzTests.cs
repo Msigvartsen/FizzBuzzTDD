@@ -105,5 +105,22 @@ namespace FizzBuzzTests
 
             Assert.AreEqual(fizzBuzzService.GetFizzBuzz(15), "FizzBuzz");
         }
+
+        [TestMethod]
+        public void GetFizzBuzz_NotFizzBuzz_ShouldReturnNumbersOnly()
+        {
+            FizzBuzzService.FizzBuzzService fizzBuzzService = new FizzBuzzService.FizzBuzzService();
+
+            for (int i = 1; i < 15; i++)
+            {
+                string result = string.Empty;
+                result = fizzBuzzService.GetFizzBuzz(i);
+
+                if(int.TryParse(result, out int x))
+                {
+                    Assert.AreEqual(i.ToString(), result);
+                }
+            }
+        }
     }
 }
